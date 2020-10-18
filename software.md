@@ -1,10 +1,17 @@
 # Software <!-- omit in toc -->
 
 - [VSCode](#vscode)
+- [Bash](#bash)
 - [Starship](#starship)
 - [Miniconda](#miniconda)
 - [Z script](#z-script)
 - [Jupyter](#jupyter)
+- [Google Translate](#google-translate)
+- [TeamViewer](#teamviewer)
+- [Python](#python)
+- [Ubuntu desktop](#ubuntu-desktop)
+- [Gmail](#gmail)
+- [Gnome-terminal](#gnome-terminal)
 
 ## [VSCode](https://code.visualstudio.com/)
 
@@ -13,6 +20,28 @@ Extensions:
 - markdownlint (David Anson)
 - Python (Microsoft)
 - Markdown All in One (Yu Zhang)
+
+## Bash
+
+Get CPU, HDD, memory stats:
+
+```bash
+echo "CPU `LC_ALL=C top -bn2 | grep "Cpu(s)" | tail -n1 | sed "s/.*, *\([0-9.]*\)%* id.*/\1/" | awk '{print 100 - $1}'`% RAM `free -m | awk '/Mem:/ { printf("%3.1f%%", $3/$2*100) }'` HDD `df -h / | awk '/\// {print $(NF-1)}'`"
+```
+
+Set unlimited history:
+
+```bash
+HISTSIZE=-1
+HISTFILESIZE=-1
+```
+
+And for older bash versions:
+
+```bash
+HISTSIZE=
+HISTFILESIZE=
+```
 
 ## [Starship](https://starship.rs)
 
@@ -62,9 +91,14 @@ Updating conda:
 conda update -n base -c defaults conda
 ```
 
-## Z script
+## [Z script](https://github.com/rupa/z)
 
-TOOD
+Basically follow the instructions in the repop. To install man page, do following:
+
+```bash
+sudo cp z.1 /usr/local/man/man1/
+sudo mandb
+```
 
 ## Jupyter
 
@@ -74,3 +108,48 @@ Add conda environment as kernel ([source article](https://medium.com/@nrk25693/h
 conda install -c anaconda ipykernel
 python -m ipykernel install --user --name=myenv
 ```
+
+## [Google Translate](https://translate.google.com/)
+
+How to use Google Translate API to get translation of any highlighted piece of text ([source article](http://www.webupd8.org/2016/03/translate-any-text-you-select-on-your.html)):
+
+```bash
+#!/usr/bin/env bash
+text="$(xsel -o)"
+translate="$(wget -U "Mozilla/5.0" -qO - "http://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=en&dt=t&q=$(echo $text | sed "s/[\"'<>]//g")" | sed "s/,,,0]],,.*//g" | awk -F'"' '{print $2, $6}')"
+echo -e "Original text:" "$text"'\n' > /tmp/gtrans
+echo "Translation:" `echo "$translate" | sed -n 1p` >> /tmp/gtrans
+zenity --text-info --title="Translation" --filename=/tmp/gtrans
+```
+
+## [TeamViewer](https://www.teamviewer.com)
+
+To disable running as a demon in the background
+
+```bash
+sudo teamviewer --daemon disable
+```
+
+## Python
+
+For Ubuntu 20.04 to get proper alias:
+
+```bash
+sudo apt install python-is-python3
+```
+
+## Ubuntu desktop
+
+[Shortcuts](https://help.ubuntu.com/stable/ubuntu-help/shell-keyboard-shortcuts.html.en) (I can never remember them).
+
+Some application can't be added as favorites because of wrong `StartupWMClass` line in the `.desktop` launcher. Here is [fix](https://askubuntu.com/questions/975178/duplicate-application-icons-in-ubuntu-dock-upon-launch/975230#975230).
+
+## Gmail
+
+How to [set up link](https://www.getmailflow.com/post/gmail-desktop-app) to call from Chrome with shortcut.
+
+Or you can pin the tab:)
+
+## Gnome-terminal
+
+[Color schemes](https://github.com/Mayccoll/Gogh).
