@@ -153,3 +153,7 @@ Or you can pin the tab:)
 ## Gnome-terminal
 
 [Color schemes](https://github.com/Mayccoll/Gogh).
+
+## [Mamba](https://github.com/mamba-org/mamba)
+
+MAMBA IS LIFE!!!
