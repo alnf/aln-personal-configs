@@ -12,6 +12,7 @@
 - [Ubuntu desktop](#ubuntu-desktop)
 - [Gmail](#gmail)
 - [Gnome-terminal](#gnome-terminal)
+- [Mamba](#mamba)
 
 ## [VSCode](https://code.visualstudio.com/)
 
@@ -143,6 +144,8 @@ sudo apt install python-is-python3
 [Shortcuts](https://help.ubuntu.com/stable/ubuntu-help/shell-keyboard-shortcuts.html.en) (I can never remember them).
 
 Some application can't be added as favorites because of wrong `StartupWMClass` line in the `.desktop` launcher. Here is [fix](https://askubuntu.com/questions/975178/duplicate-application-icons-in-ubuntu-dock-upon-launch/975230#975230).
+
+Moving windows to a specific workspace [extention](https://extensions.gnome.org/extension/16/auto-move-windows/).
 
 ## Gmail
 
