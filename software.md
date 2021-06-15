@@ -109,6 +109,11 @@ Add conda environment as kernel ([source article](https://medium.com/@nrk25693/h
 conda install -c anaconda ipykernel
 python -m ipykernel install --user --name=myenv
 ```
+Additional package might be needed in the target env:
+
+```bash
+conda install nb_conda
+```
 
 ## [Google Translate](https://translate.google.com/)
 
