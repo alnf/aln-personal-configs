@@ -13,6 +13,7 @@
 - [Gmail](#gmail)
 - [Gnome-terminal](#gnome-terminal)
 - [Mamba](#mamba)
+- [Firefox](#firefox)
 
 ## [VSCode](https://code.visualstudio.com/)
 
@@ -20,7 +21,7 @@ Extensions:
 
 - markdownlint (David Anson)
 - Python (Microsoft)
-- Markdown All in One (Yu Zhang)
+- Markdown All in One (Yu Zhang). Toggle view with CTRL+SHIFT+V.
 
 ## Bash
 
@@ -109,6 +110,7 @@ Add conda environment as kernel ([source article](https://medium.com/@nrk25693/h
 conda install -c anaconda ipykernel
 python -m ipykernel install --user --name=myenv
 ```
+
 Additional package might be needed in the target env:
 
 ```bash
@@ -150,7 +152,16 @@ sudo apt install python-is-python3
 
 Some application can't be added as favorites because of wrong `StartupWMClass` line in the `.desktop` launcher. Here is [fix](https://askubuntu.com/questions/975178/duplicate-application-icons-in-ubuntu-dock-upon-launch/975230#975230).
 
-Moving windows to a specific workspace [extention](https://extensions.gnome.org/extension/16/auto-move-windows/).
+Extentions:
+
+- [Moving windows](https://extensions.gnome.org/extension/16/) to a specific workspace extention.
+- [Unite](https://extensions.gnome.org/extension/1287/unite/) - windows laoyout tweaks, some kind of global menu.
+
+Fixing keyboard leyout switch and other things:
+
+```bash
+sudo apt-get install gnome-tweaks
+```
 
 ## Gmail
 
@@ -165,3 +176,9 @@ Or you can pin the tab:)
 ## [Mamba](https://github.com/mamba-org/mamba)
 
 MAMBA IS LIFE!!!
+
+## Firefox
+
+Add-ons:
+
+- Tree Style Tab
