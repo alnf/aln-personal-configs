@@ -152,16 +152,18 @@ sudo apt install python-is-python3
 
 Some application can't be added as favorites because of wrong `StartupWMClass` line in the `.desktop` launcher. Here is [fix](https://askubuntu.com/questions/975178/duplicate-application-icons-in-ubuntu-dock-upon-launch/975230#975230).
 
-Extentions:
-
-- [Moving windows](https://extensions.gnome.org/extension/16/) to a specific workspace extention.
-- [Unite](https://extensions.gnome.org/extension/1287/unite/) - windows laoyout tweaks, some kind of global menu.
-
 Fixing keyboard leyout switch and other things:
 
 ```bash
 sudo apt-get install gnome-tweaks
 ```
+
+Swiching from Wayland to Xorg [manual](https://fostips.com/switch-back-xorg-ubuntu-21-04/).
+
+Extentions:
+
+- [Moving windows](https://extensions.gnome.org/extension/16/) to a specific workspace extention.
+- [Unite](https://extensions.gnome.org/extension/1287/unite/) - windows laoyout tweaks, some kind of global menu.
 
 ## Gmail
 
