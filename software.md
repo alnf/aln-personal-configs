@@ -14,7 +14,6 @@
 - [Gnome-terminal](#gnome-terminal)
 - [Mamba](#mamba)
 - [Firefox](#firefox)
-- [AsusCtl](#asusctl)
 
 ## [VSCode](https://code.visualstudio.com/)
 
@@ -185,7 +184,3 @@ MAMBA IS LIFE!!!
 Add-ons:
 
 - Tree Style Tab
-
-## [AsusCtl](https://gitlab.com/asus-linux/asusctl)
-
-For switching graphics and other things. Also, to make different modes work (and external monitor via DisplayPort-Type-C cable) you would need [NVidia drivers](https://linuxconfig.org/how-to-install-the-nvidia-drivers-on-ubuntu-20-10-groovy-gorilla-linux).
